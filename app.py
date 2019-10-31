@@ -13,7 +13,7 @@ from gingerit.gingerit import GingerIt
 import googlemaps
 from grammer import *
 from address import *
-from nairaland import *
+from nairalandscraper import *
 from confidence import *
 
 app = Flask(__name__)
