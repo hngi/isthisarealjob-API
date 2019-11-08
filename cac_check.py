@@ -5,8 +5,11 @@ import re
 import pandas as pd
 from time import sleep, time
 
-GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google-chrome'
-CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+# GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google-chrome'
+# CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+
+GOOGLE_CHROME_PATH = '/usr/bin/google-chrome'
+CHROMEDRIVER_PATH = '/usr/bin/chromedriver'
 
 
 def get_token(api_key, url, driver):
@@ -55,7 +58,7 @@ def scraper(company_name):
     options.set_headless()
     # driver = webdriver.Chrome(CHROMEDRIVER_PATH, options=options)
     driver = webdriver.Chrome(chrome_path, options=options)
-    api_key = ""
+    api_key = "5050a1bdffcfe8fb69583c08263fc4f3"
     url = "https://publicsearch.cac.gov.ng/ComSearch/"
     page_source = browser(api_key, url, company_name, driver)
     soup = BeautifulSoup(page_source, 'html.parser')
